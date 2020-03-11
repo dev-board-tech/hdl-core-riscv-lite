@@ -1,10 +1,18 @@
 resource/SchemnaticBlockOfInterruptProcedureFlow/*
 
 example/single-bus/prj/xilinx/.Xil/*
-example/single-bus/prj/xilinx/riscv-lite.*
+example/single-bus/prj/xilinx/riscv-lite.cache/*
+example/single-bus/prj/xilinx/riscv-lite.hw/*
+example/single-bus/prj/xilinx/riscv-lite.ip_user_files/*
+example/single-bus/prj/xilinx/riscv-lite.runs/*
+example/single-bus/prj/xilinx/riscv-lite.sim/*
 
 example/dual-bus/prj/xilinx/.Xil/*
-example/dual-bus/prj/xilinx/riscv-lite.*
+example/dual-bus/prj/xilinx/riscv-lite.cache/*
+example/dual-bus/prj/xilinx/riscv-lite.hw/*
+example/dual-bus/prj/xilinx/riscv-lite.ip_user_files/*
+example/dual-bus/prj/xilinx/riscv-lite.runs/*
+example/dual-bus/prj/xilinx/riscv-lite.sim/*
 
 *.jou
 *.log

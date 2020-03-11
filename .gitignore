@@ -1,0 +1,11 @@
+resource/SchemnaticBlockOfInterruptProcedureFlow/*
+
+example/single-bus/prj/xilinx/.Xil/*
+example/single-bus/prj/xilinx/riscv-lite.*
+
+example/dual-bus/prj/xilinx/.Xil/*
+example/dual-bus/prj/xilinx/riscv-lite.*
+
+*.jou
+*.log
+*.str

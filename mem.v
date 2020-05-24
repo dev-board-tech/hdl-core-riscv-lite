@@ -49,15 +49,20 @@ reg [7:0]mem_b2[((2**ADDR_BUS_LEN) / 4)-1:0];
 (* ram_style="block" *)
 reg [7:0]mem_b3[((2**ADDR_BUS_LEN) / 4)-1:0];
 
+localparam RAM_FILE_0 = {RAM_PATH, "_0.mem"};
+localparam RAM_FILE_1 = {RAM_PATH, "_1.mem"};
+localparam RAM_FILE_2 = {RAM_PATH, "_2.mem"};
+localparam RAM_FILE_3 = {RAM_PATH, "_3.mem"};
+
 
 integer clear_cnt;
 initial begin
 if (RAM_PATH != "")
 begin
-	$readmemh({RAM_PATH, "_0.mem"}, mem_b0);
-	$readmemh({RAM_PATH, "_1.mem"}, mem_b1);
-	$readmemh({RAM_PATH, "_2.mem"}, mem_b2);
-	$readmemh({RAM_PATH, "_3.mem"}, mem_b3);
+	$readmemh(RAM_FILE_0, mem_b0);
+	$readmemh(RAM_FILE_1, mem_b1);
+	$readmemh(RAM_FILE_2, mem_b2);
+	$readmemh(RAM_FILE_3, mem_b3);
 end
 else
 begin
@@ -127,7 +132,7 @@ end
 always @ *
 begin
 	out = 32'h00000000;
-	if(cs)
+	if(cs_del)
 		out = TMP;
 end
 

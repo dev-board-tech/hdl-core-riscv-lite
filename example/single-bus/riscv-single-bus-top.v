@@ -137,11 +137,11 @@ pio_A_inst(
 	.rst(~pll_locked_delayed | ~rst),
 	.clk(core_clk),
 
-	.addr_dat(pgm_addr[12:0]),
-	.wr_dat(pgm_write_w & pgm_io_en),
-	.rd_dat(pgm_io_en),
-	.bus_dat_in(pgm_out),
-	.bus_dat_out(pioA_bus_out),
+	.addr(pgm_addr[12:0]),
+	.wr(pgm_write_w & pgm_io_en),
+	.rd(pgm_io_en),
+	.bus_in(pgm_out),
+	.bus_out(pioA_bus_out),
 
 	.io_in(SW),
 	.io_out(LED),

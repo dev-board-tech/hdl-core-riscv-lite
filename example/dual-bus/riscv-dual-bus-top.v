@@ -133,21 +133,23 @@ atmega_pio # (
 	.PULLUP_MASK(32'h0),
 	.PULLDN_MASK(32'h0),
 	.INVERSE_MASK(32'hFFFFFFFF),
-	.OUT_ENABLED_MASK(32'h000000FF)
+	.OUT_ENABLED_MASK(32'h000000FF),
+	.INITIAL_OUTPUT_VALUE('h00000000),
+	.INITIAL_DIR_VALUE('h00000000)
 	)
 pio_A_inst(
-	.rst(~pll_locked_delayed | ~rst),
-	.clk(core_clk),
+	.rst_i(~pll_locked_delayed | ~rst),
+	.clk_i(core_clk),
 
-	.addr_dat(data_addr[12:0]),
-	.wr_dat(data_write_w & io_en),
-	.rd_dat(io_en),
-	.bus_dat_in(data_out),
-	.bus_dat_out(pioA_bus_out),
+	.addr_i(data_addr[12:0]),
+	.wr_i(data_write_w & io_en),
+	.rd_i(io_en),
+	.bus_i(data_out),
+	.bus_o(pioA_bus_out),
 
-	.io_in(SW),
-	.io_out(LED),
-	.pio_out_io_connect()
+	.io_i(SW),
+	.io_o(LED),
+	.pio_out_io_connect_o()
 	);
 
 wire [31:0]rom_bus_out;

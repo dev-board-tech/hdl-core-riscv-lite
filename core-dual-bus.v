@@ -614,7 +614,7 @@ begin
 	end
 end
 
-risc_v_alu_light #
+risc_v_alu_lite #
 	(
 	.PLATFORM(PLATFORM),
 	.EXTENSION_M(EXTENSION_M),

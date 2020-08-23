@@ -22,7 +22,7 @@
 
 `include "def-h.v"
 
-module risc_v_alu_light #
+module risc_v_alu_lite #
 	(
 	parameter PLATFORM = "XILINX",
 	parameter EXTENSION_M = "TRUE",
